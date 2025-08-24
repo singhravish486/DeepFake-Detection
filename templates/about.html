@@ -1,0 +1,329 @@
+{% extends "base.html" %}
+
+{% block title %}About - Aerial DeepFake Detection{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Header -->
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-primary">
+            <i class="fas fa-info-circle"></i> About This Project
+        </h1>
+        <p class="lead text-muted">
+            Learn about the technology and methodology behind our aerial deepfake detection system
+        </p>
+    </div>
+
+    <!-- Project Overview -->
+    <div class="row mb-5">
+        <div class="col-lg-8 mx-auto">
+            <div class="card border-0 shadow-lg">
+                <div class="card-body p-5">
+                    <h2 class="text-primary mb-4">Project Overview</h2>
+                    <p class="lead">
+                        This system detects manipulated (fake) aerial and satellite images using 
+                        advanced artificial intelligence with explainable decision-making capabilities.
+                    </p>
+                    <p>
+                        In an era where deepfake technology can create convincing fake imagery, 
+                        it's crucial to have reliable tools for detecting manipulated aerial and 
+                        satellite images. Our system addresses this challenge using state-of-the-art 
+                        deep learning techniques combined with explainable AI.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technical Architecture -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="text-center text-primary mb-5">Technical Architecture</h2>
+            
+            <div class="row g-4">
+                <!-- CNN Component -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-layer-group fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="text-primary">CNN Branch (EfficientNet)</h4>
+                            <p class="text-muted">
+                                <strong>Purpose:</strong> Analyzes local features and small-scale artifacts
+                            </p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success"></i> Detects texture inconsistencies</li>
+                                <li><i class="fas fa-check text-success"></i> Identifies edge artifacts</li>
+                                <li><i class="fas fa-check text-success"></i> Finds compression anomalies</li>
+                                <li><i class="fas fa-check text-success"></i> Spots local manipulations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ViT Component -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-eye fa-3x text-success"></i>
+                            </div>
+                            <h4 class="text-success">Vision Transformer (ViT)</h4>
+                            <p class="text-muted">
+                                <strong>Purpose:</strong> Captures global context and large-scale patterns
+                            </p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success"></i> Global scene understanding</li>
+                                <li><i class="fas fa-check text-success"></i> Long-range dependencies</li>
+                                <li><i class="fas fa-check text-success"></i> Terrain consistency analysis</li>
+                                <li><i class="fas fa-check text-success"></i> Large-scale manipulations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Explainable AI -->
+    <div class="row mb-5">
+        <div class="col-lg-8 mx-auto">
+            <div class="card border-0 shadow-lg bg-light">
+                <div class="card-body p-5">
+                    <h3 class="text-primary mb-4">
+                        <i class="fas fa-lightbulb"></i> Explainable AI with Grad-CAM
+                    </h3>
+                    <p>
+                        Our system doesn't just tell you if an image is fake - it shows you exactly 
+                        which parts of the image influenced that decision. Using Gradient-weighted 
+                        Class Activation Mapping (Grad-CAM), we generate visual explanations that 
+                        highlight the regions the AI model focused on.
+                    </p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <h5>Why Explainability Matters:</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-shield-alt text-primary"></i> <strong>Trust:</strong> See the AI's reasoning</li>
+                                <li><i class="fas fa-gavel text-primary"></i> <strong>Legal:</strong> Evidence for court cases</li>
+                                <li><i class="fas fa-graduation-cap text-primary"></i> <strong>Learning:</strong> Understand manipulation techniques</li>
+                                <li><i class="fas fa-bug text-primary"></i> <strong>Debugging:</strong> Identify model biases</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>How Grad-CAM Works:</h5>
+                            <ol class="text-muted">
+                                <li>AI processes the image</li>
+                                <li>Gradients flow back to feature maps</li>
+                                <li>Important regions are highlighted</li>
+                                <li>Visual heatmap is generated</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Applications -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="text-center text-primary mb-5">Real-World Applications</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="feature-icon bg-danger text-white rounded-circle mx-auto mb-3">
+                            <i class="fas fa-shield-alt fa-2x"></i>
+                        </div>
+                        <h5>Military Intelligence</h5>
+                        <p class="text-muted">Verify authenticity of satellite imagery in defense and security applications.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="feature-icon bg-primary text-white rounded-circle mx-auto mb-3">
+                            <i class="fas fa-newspaper fa-2x"></i>
+                        </div>
+                        <h5>News Verification</h5>
+                        <p class="text-muted">Detect manipulated aerial photos in news media and journalism.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="feature-icon bg-success text-white rounded-circle mx-auto mb-3">
+                            <i class="fas fa-leaf fa-2x"></i>
+                        </div>
+                        <h5>Environmental Monitoring</h5>
+                        <p class="text-muted">Ensure integrity of satellite data for climate and environmental research.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="feature-icon bg-warning text-white rounded-circle mx-auto mb-3">
+                            <i class="fas fa-gavel fa-2x"></i>
+                        </div>
+                        <h5>Legal Evidence</h5>
+                        <p class="text-muted">Authenticate aerial photography for legal proceedings and court cases.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technical Details -->
+    <div class="row mb-5">
+        <div class="col-lg-6">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body p-4">
+                    <h4 class="text-primary mb-3">
+                        <i class="fas fa-cogs"></i> Model Specifications
+                    </h4>
+                    <table class="table table-borderless">
+                        <tr>
+                            <td><strong>Architecture:</strong></td>
+                            <td>Hybrid CNN + Vision Transformer</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CNN Backbone:</strong></td>
+                            <td>EfficientNetB0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Parameters:</strong></td>
+                            <td>~4.9M total (1.7M trainable)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Input Size:</strong></td>
+                            <td>224×224×3</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Framework:</strong></td>
+                            <td>TensorFlow 2.x</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Training:</strong></td>
+                            <td>Transfer Learning + Fine-tuning</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body p-4">
+                    <h4 class="text-success mb-3">
+                        <i class="fas fa-chart-line"></i> Performance Metrics
+                    </h4>
+                    <table class="table table-borderless">
+                        <tr>
+                            <td><strong>Current Accuracy*:</strong></td>
+                            <td>50% (limited by dataset size)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Expected with full data:</strong></td>
+                            <td>85-95% accuracy</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Analysis Time:</strong></td>
+                            <td>&lt; 1 second per image</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Supported Formats:</strong></td>
+                            <td>JPG, PNG, GIF, BMP, TIFF</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Max File Size:</strong></td>
+                            <td>16 MB</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Explainability:</strong></td>
+                            <td>Grad-CAM visualizations</td>
+                        </tr>
+                    </table>
+                    <small class="text-muted">*Current model trained on limited dataset for demonstration</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Limitations and Future Work -->
+    <div class="row mb-5">
+        <div class="col-lg-6">
+            <div class="card border-warning border-2 h-100">
+                <div class="card-body p-4">
+                    <h4 class="text-warning mb-3">
+                        <i class="fas fa-exclamation-triangle"></i> Current Limitations
+                    </h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-minus text-warning"></i> Limited training dataset (100 images)</li>
+                        <li><i class="fas fa-minus text-warning"></i> May have false positives on complex imagery</li>
+                        <li><i class="fas fa-minus text-warning"></i> Optimized for specific types of aerial images</li>
+                        <li><i class="fas fa-minus text-warning"></i> Requires further validation on diverse datasets</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="card border-info border-2 h-100">
+                <div class="card-body p-4">
+                    <h4 class="text-info mb-3">
+                        <i class="fas fa-rocket"></i> Future Improvements
+                    </h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-plus text-info"></i> Larger, more diverse training dataset</li>
+                        <li><i class="fas fa-plus text-info"></i> Multi-scale analysis capabilities</li>
+                        <li><i class="fas fa-plus text-info"></i> Real-time video processing</li>
+                        <li><i class="fas fa-plus text-info"></i> Integration with forensic analysis tools</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technology Stack -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card border-0 shadow-lg bg-dark text-light">
+                <div class="card-body p-5">
+                    <h3 class="text-center mb-5">
+                        <i class="fas fa-laptop-code"></i> Technology Stack
+                    </h3>
+                    
+                    <div class="row text-center g-4">
+                        <div class="col-md-2">
+                            <i class="fab fa-python fa-3x text-warning mb-2"></i>
+                            <h6>Python</h6>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fas fa-brain fa-3x text-primary mb-2"></i>
+                            <h6>TensorFlow</h6>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fas fa-server fa-3x text-success mb-2"></i>
+                            <h6>Flask</h6>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fab fa-bootstrap fa-3x text-info mb-2"></i>
+                            <h6>Bootstrap</h6>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fab fa-js-square fa-3x text-warning mb-2"></i>
+                            <h6>JavaScript</h6>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fas fa-cloud fa-3x text-light mb-2"></i>
+                            <h6>Cloud Ready</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

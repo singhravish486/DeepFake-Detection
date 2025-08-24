@@ -1,0 +1,215 @@
+{% extends "base.html" %}
+
+{% block title %}Aerial DeepFake Detection - Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-gradient-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">
+                    <i class="fas fa-satellite text-warning"></i>
+                    Aerial DeepFake Detection
+                </h1>
+                <p class="lead mb-4">
+                    Advanced AI system that detects manipulated aerial and satellite images using 
+                    explainable artificial intelligence. Get instant analysis with visual explanations.
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="{{ url_for('analyze') }}" class="btn btn-warning btn-lg">
+                        <i class="fas fa-upload"></i> Start Analysis
+                    </a>
+                    <a href="{{ url_for('about') }}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-info-circle"></i> Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center">
+                    <img src="{{ url_for('static', filename='images/aerial-demo.jpg') }}" 
+                         alt="Aerial Image Analysis" 
+                         class="img-fluid rounded shadow"
+                         style="max-height: 400px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold text-primary">Advanced AI Detection System</h2>
+            <p class="lead text-muted">Powered by cutting-edge deep learning and explainable AI</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Feature 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-primary text-white rounded-circle mx-auto mb-3">
+                            <i class="fas fa-brain fa-2x"></i>
+                        </div>
+                        <h5 class="card-title">Hybrid AI Model</h5>
+                        <p class="card-text text-muted">
+                            Combines CNN and Vision Transformer architectures for superior accuracy in detecting manipulated aerial imagery.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-success text-white rounded-circle mx-auto mb-3">
+                            <i class="fas fa-eye fa-2x"></i>
+                        </div>
+                        <h5 class="card-title">Explainable AI</h5>
+                        <p class="card-text text-muted">
+                            Grad-CAM visualizations show exactly which parts of the image influenced the AI's decision.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-warning text-white rounded-circle mx-auto mb-3">
+                            <i class="fas fa-bolt fa-2x"></i>
+                        </div>
+                        <h5 class="card-title">Real-time Analysis</h5>
+                        <p class="card-text text-muted">
+                            Get instant results with confidence scores and detailed explanations for each prediction.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feature 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-info text-white rounded-circle mx-auto mb-3">
+                            <i class="fas fa-shield-alt fa-2x"></i>
+                        </div>
+                        <h5 class="card-title">Security Focused</h5>
+                        <p class="card-text text-muted">
+                            Built for security applications, news verification, and environmental monitoring use cases.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold text-primary">How It Works</h2>
+            <p class="lead text-muted">Simple 3-step process for aerial image analysis</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="text-center">
+                    <div class="step-number bg-primary text-white rounded-circle mx-auto mb-3">1</div>
+                    <h4>Upload Image</h4>
+                    <p class="text-muted">
+                        Upload your aerial or satellite image in common formats (JPG, PNG, etc.)
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="text-center">
+                    <div class="step-number bg-success text-white rounded-circle mx-auto mb-3">2</div>
+                    <h4>AI Analysis</h4>
+                    <p class="text-muted">
+                        Our hybrid CNN + ViT model analyzes the image for manipulation artifacts
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="text-center">
+                    <div class="step-number bg-warning text-white rounded-circle mx-auto mb-3">3</div>
+                    <h4>Get Results</h4>
+                    <p class="text-muted">
+                        Receive detailed results with confidence scores and visual explanations
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="{{ url_for('analyze') }}" class="btn btn-primary btn-lg">
+                <i class="fas fa-play"></i> Try It Now
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center g-4">
+            <div class="col-md-3">
+                <div class="stat-item">
+                    <h2 class="display-4 fw-bold text-primary">98%</h2>
+                    <p class="text-muted">Model Accuracy*</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-item">
+                    <h2 class="display-4 fw-bold text-success">5M+</h2>
+                    <p class="text-muted">Parameters</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-item">
+                    <h2 class="display-4 fw-bold text-warning">&lt;1s</h2>
+                    <p class="text-muted">Analysis Time</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-item">
+                    <h2 class="display-4 fw-bold text-info">100%</h2>
+                    <p class="text-muted">Explainable</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <small class="text-muted">*With sufficient training data</small>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+// Add some interactive animations
+$(document).ready(function() {
+    // Animate stats on scroll
+    $(window).scroll(function() {
+        $('.stat-item').each(function() {
+            var elementTop = $(this).offset().top;
+            var elementBottom = elementTop + $(this).outerHeight();
+            var viewportTop = $(window).scrollTop();
+            var viewportBottom = viewportTop + $(window).height();
+            
+            if (elementBottom > viewportTop && elementTop < viewportBottom) {
+                $(this).addClass('animate__animated animate__fadeInUp');
+            }
+        });
+    });
+});
+</script>
+{% endblock %}

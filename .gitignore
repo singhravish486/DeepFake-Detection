@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+*.log
+
+# Environments
+.env
+.venv/
+venv/
+.env.*
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build / Dist
+build/
+dist/
+*.spec
+
+# Project data and generated assets
+uploads/
+static/results/
+static/temp/
+
+# Large model files
+my_aerial_deepfake_detector.h5
+
+# Other
+*.swp
+*.swo
